@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0a192f;
+    color: #8892b0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 10%;
+    background: rgba(10, 25, 47, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1e3a5f;
+    transition: padding 0.3s ease;
+}
+
+.navbar.scrolled {
+    padding: 12px 10%;
+}
+
+.nav-logo {
+    color: #64ffda;
+    font-family: monospace;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ccd6f6;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: monospace;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #64ffda;
+}
+
+.accent-nav {
+    color: #64ffda;
+    margin-right: 4px;
+}
+
+.nav-cta {
+    border: 1px solid #64ffda;
+    color: #64ffda !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background 0.2s ease !important;
+}
+
+.nav-cta:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+/* ── HERO ── */
+.hero-brittany {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* ESTO ES CLAVE: Alinea todo el contenido a la izquierda pero respetando márgenes */
+    align-items: flex-start; 
+    background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), 
+                url('../assets/Tecnology.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Aumentamos el espacio a la izquierda significativamente */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 80px; /* Compensa la altura del navbar fijo */
+}
+
+/* ── CONTACT INFO ── */
+.contact-info {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-info p {
+    font-family: monospace;
+    font-size: 14px;
+    color: #8892b0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.contact-icon {
+    color: #64ffda;
+    font-style: normal;
+}
+
+h1 { color: #ccd6f6; font-size: clamp(40px, 8vw, 70px); margin: 0; }
+h2 { color: #8892b0; font-size: clamp(30px, 5vw, 50px); margin: 0; }
+h3 { color: #ccd6f6; border-bottom: 1px solid #233554; padding-bottom: 10px; margin-top: 50px; }
+h4 { color: #ccd6f6; font-size: 18px; font-weight: 500; margin-bottom: 4px; }
+
+.accent { color: #64ffda; font-family: monospace; font-size: 16px; margin-bottom: 10px; }
+
+.description { max-width: 600px; margin-top: 25px; font-size: 18px; }
+
+.company { color: #64ffda; }
+
+.btn-outline {
+    display: inline-block;
+    /* EVITA QUE SE ESTIRE: Muy importante */
+    align-self: flex-start; 
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    /* Ajustamos el padding para que se vea más estético */
+    padding: 12px 24px; 
+    text-decoration: none;
+    border-radius: 4px;
+    margin-top: 40px;
+    font-family: monospace;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+.job, .edu-item { margin-bottom: 30px; }
+.date { font-family: monospace; font-size: 14px; margin: 5px 0; }
+
+ul.cert-list { list-style: none; padding: 0; }
+ul.cert-list li::before { content: "▹ "; color: #64ffda; }
+
+/* ── SECCIONES DE CONTENIDO ── */
+#experiencia, #formacion {
+    padding: 80px 10% 60px 10%;
+    max-width: 1200px;
+}
+
+/* Estilos para listas dentro de .job */
+.job ul, .edu-item ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.job ul li, .edu-item ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.job ul li::before, .edu-item ul li::before {
+    content: "▹";
+    color: #64ffda;
+    position: absolute;
+    left: 0;
+}
+
+/* Espaciado extra para los títulos de sección (01. y 02.) */
+h3 {
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+/* Separación entre cada puesto de trabajo o estudio */
+.job, .edu-item {
+    margin-bottom: 40px;
+}
