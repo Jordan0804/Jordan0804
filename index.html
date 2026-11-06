@@ -195,6 +195,11 @@ footer span{color:var(--accent)}
 .mobile-menu a{font-family:var(--fh);font-size:2rem;font-weight:700;color:var(--text);text-decoration:none;transition:color 0.2s}
 .mobile-menu a:hover{color:var(--accent2)}
 
+.hero-photo{width:clamp(200px,20vw,260px);aspect-ratio:1;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--accent),var(--accent2),var(--gold));position:absolute;right:4rem;top:50%;transform:translateY(-50%);opacity:0;animation:fu 0.9s ease forwards 0.6s;box-shadow:0 20px 60px rgba(0,0,0,0.45)}
+.hero-photo img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+@media(max-width:1099px){
+  .hero-photo{position:static;transform:none;width:130px;margin-bottom:1.75rem}
+}
 @media(max-width:900px){
   nav{padding:1rem 1.5rem}
   .nav-links,.nav-cv{display:none}
@@ -244,6 +249,7 @@ footer span{color:var(--accent)}
 
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-photo"><img src="./Foto_Jordan.jpg" alt="Jordan Viola de los Santos" width="480" height="480"></div>
   <div class="hero-eyebrow"><span class="dot"></span>Disponible para oportunidades</div>
   <h1>Jordan Viola<br><em>de los Santos.</em></h1>
   <h2>Desarrollador Full Stack en Formación</h2>
@@ -273,7 +279,6 @@ footer span{color:var(--accent)}
           <div class="skill"><span class="skill-dot dot-blue"></span>HTML5</div>
           <div class="skill"><span class="skill-dot dot-blue"></span>CSS3</div>
           <div class="skill"><span class="skill-dot dot-blue"></span>JavaScript</div>
-          <div class="skill"><span class="skill-dot dot-purple"></span>PHP</div>
           <div class="skill"><span class="skill-dot dot-green"></span>MySQL / SQL</div>
           <div class="skill"><span class="skill-dot dot-green"></span>Docker</div>
           <div class="skill"><span class="skill-dot dot-gold"></span>Git &amp; GitHub</div>
@@ -292,10 +297,6 @@ footer span{color:var(--accent)}
         <div class="skill-bar-item">
           <div class="skill-bar-top"><span class="skill-bar-name">HTML / CSS</span><span class="skill-bar-pct">80%</span></div>
           <div class="skill-bar-track"><div class="skill-bar-fill fill-blue" data-w="80"></div></div>
-        </div>
-        <div class="skill-bar-item">
-          <div class="skill-bar-top"><span class="skill-bar-name">PHP / MySQL</span><span class="skill-bar-pct">65%</span></div>
-          <div class="skill-bar-track"><div class="skill-bar-fill fill-blue" data-w="65"></div></div>
         </div>
         <div class="skill-bar-item">
           <div class="skill-bar-top"><span class="skill-bar-name">JavaScript</span><span class="skill-bar-pct">55%</span></div>
@@ -393,7 +394,7 @@ footer span{color:var(--accent)}
       <div class="tl-date">2024 — Presente</div>
       <div class="tl-role">Tecnólogo en Desarrollo de Software</div>
       <div class="tl-company">@ ITLA — Instituto Tecnológico de Las Américas</div>
-      <div class="tl-desc">Formación intensiva en programación web, bases de datos y desarrollo de software empresarial con enfoque en el ecosistema JavaScript / PHP.</div>
+      <div class="tl-desc">Formación intensiva en programación web, bases de datos y desarrollo de software empresarial con enfoque en el ecosistema JavaScript / Node.js.</div>
     </div>
 
     <div class="tl-item">
@@ -480,7 +481,8 @@ footer span{color:var(--accent)}
       <p>Mi bandeja de entrada siempre está abierta. Ya sea para un proyecto freelance, una colaboración o una oportunidad laboral — con gusto hablamos.</p>
       <div class="contact-chips">
         <a href="mailto:ing.viola08@gmail.com" class="chip"><span class="chip-icon">✉️</span><div><div>Email</div><div class="chip-val">ing.viola08@gmail.com</div></div></a>
-        <a href="tel:+18296640319" class="chip"><span class="chip-icon">📱</span><div><div>Teléfono</div><div class="chip-val">829-664-0319</div></div></a>
+        <a href="tel:+18294751886" class="chip"><span class="chip-icon">📱</span><div><div>Celular</div><div class="chip-val">829-475-1886</div></div></a>
+        <a href="tel:+18092619786" class="chip"><span class="chip-icon">☎️</span><div><div>Residencial</div><div class="chip-val">809-261-9786</div></div></a>
         <a href="https://www.linkedin.com/in/jordan-viola-de-los-santos" target="_blank" class="chip"><span class="chip-icon">💼</span><div><div>LinkedIn</div><div class="chip-val">jordan-viola-de-los-santos</div></div></a>
         <a href="https://github.com/Jordan0804" target="_blank" class="chip"><span class="chip-icon">🐙</span><div><div>GitHub</div><div class="chip-val">Jordan0804</div></div></a>
       </div>
